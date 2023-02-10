@@ -16,4 +16,10 @@ router.get('/cpus', (req, res, next)=> {
     })
 })
 
+router.get('/cpus/:id', (req, res, next)=> {
+    res.json({
+        cpus : os.cpus()[req.params.id],
+    })
+})
+
 module.exports = router;
